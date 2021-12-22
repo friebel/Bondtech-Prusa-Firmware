@@ -5324,6 +5324,11 @@ static void lcd_main_menu()
 #endif //SDCARDDETECT
          }
 #endif //SDSUPPORT
+
+        if(!farm_mode) {
+            SETTINGS_NOZZLE;
+        }
+
         if(!farm_mode) {
             const int8_t sheet = eeprom_read_byte(&(EEPROM_Sheets_base->active_sheet));
             const int8_t nextSheet = eeprom_next_initialized_sheet(sheet);

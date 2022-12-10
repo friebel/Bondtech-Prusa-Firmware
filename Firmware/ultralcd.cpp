@@ -2267,6 +2267,7 @@ void lcd_load_filament_color_check()
 }
 
 #ifdef FILAMENT_SENSOR
+static void lcd_menu_AutoLoadFilament() __attribute__((unused));
 static void lcd_menu_AutoLoadFilament()
 {
     lcd_display_message_fullscreen_nonBlocking_P(_T(MSG_AUTOLOADING_ENABLED));
@@ -5361,7 +5362,7 @@ static void lcd_main_menu()
                 if (fsensor.isEnabled()) {
                     if (!fsensor.getFilamentPresent()) {
                         if (fsensor.getAutoLoadEnabled()) {
-                            MENU_ITEM_SUBMENU_P(_T(MSG_AUTOLOAD_FILAMENT), lcd_menu_AutoLoadFilament);
+                            //MENU_ITEM_SUBMENU_P(_T(MSG_AUTOLOAD_FILAMENT), lcd_menu_AutoLoadFilament);
                         } else {
                             MENU_ITEM_SUBMENU_P(_T(MSG_LOAD_FILAMENT), lcd_LoadFilament);
                         }

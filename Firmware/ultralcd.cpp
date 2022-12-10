@@ -5717,6 +5717,21 @@ static void lcd_main_menu()
 #endif //MMU_HAS_CUTTER
         } else {
 #ifdef FILAMENT_SENSOR
+            if (FSensorStateMenu == 0) {
+                if (fsensor_not_responding && (mmu_enabled == false)) {
+                    /* Filament sensor not working*/
+                    MENU_ITEM_TOGGLE_P(_T(MSG_FSENSOR), _T(MSG_NA), lcd_fsensor_state_set);
+                }
+                else {
+                    /* Filament sensor turned off, working, no problems*/
+                    MENU_ITEM_TOGGLE_P(_T(MSG_FSENSOR), _T(MSG_OFF), lcd_fsensor_state_set);
+                }
+            }
+            else {
+                MENU_ITEM_TOGGLE_P(_T(MSG_FSENSOR), _T(MSG_ON), lcd_fsensor_state_set);
+            }
+#endif //FILAMENT_SENSOR
+#ifdef FILAMENT_SENSOR
             if ((fsensor_autoload_enabled == true) && (fsensor_enabled == true) && (mmu_enabled == false)) {
                 //MENU_ITEM_SUBMENU_P(_i("AutoLoad filament"), lcd_menu_AutoLoadFilament);////MSG_AUTOLOAD_FILAMENT c=18
             }

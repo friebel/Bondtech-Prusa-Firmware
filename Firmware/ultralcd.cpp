@@ -2379,6 +2379,7 @@ void lcd_load_filament_color_check()
 }
 
 #ifdef FILAMENT_SENSOR
+static void lcd_menu_AutoLoadFilament() __attribute__((unused));
 static void lcd_menu_AutoLoadFilament()
 {
      uint8_t nlines;
@@ -5716,8 +5717,9 @@ static void lcd_main_menu()
 #endif //MMU_HAS_CUTTER
         } else {
 #ifdef FILAMENT_SENSOR
-            if ((fsensor_autoload_enabled == true) && (fsensor_enabled == true) && (mmu_enabled == false))
-                MENU_ITEM_SUBMENU_P(_i("AutoLoad filament"), lcd_menu_AutoLoadFilament);////MSG_AUTOLOAD_FILAMENT c=18
+            if ((fsensor_autoload_enabled == true) && (fsensor_enabled == true) && (mmu_enabled == false)) {
+                //MENU_ITEM_SUBMENU_P(_i("AutoLoad filament"), lcd_menu_AutoLoadFilament);////MSG_AUTOLOAD_FILAMENT c=18
+            }
             else
 #endif //FILAMENT_SENSOR
             {

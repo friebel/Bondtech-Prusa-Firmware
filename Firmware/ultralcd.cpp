@@ -5684,8 +5684,8 @@ static void lcd_main_menu()
 #endif //SDCARDDETECT
         }
     } else {
-        bMain=true;                                   // flag (i.e. 'fake parameter') for 'lcd_sdcard_menu()' function
-        MENU_ITEM_SUBMENU_P(_i("No SD card"), lcd_sdcard_menu);////MSG_NO_CARD c=18
+        // bMain=true;                                   // flag (i.e. 'fake parameter') for 'lcd_sdcard_menu()' function
+        // MENU_ITEM_SUBMENU_P(_i("No SD card"), lcd_sdcard_menu);////MSG_NO_CARD c=18
 #if SDCARDDETECT < 1
         MENU_ITEM_GCODE_P(_i("Init. SD card"), PSTR("M21")); // Manually initialize the SD-card via user interface////MSG_INIT_SDCARD c=18
 #endif //SDCARDDETECT

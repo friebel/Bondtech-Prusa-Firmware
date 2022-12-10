@@ -1600,7 +1600,7 @@ static void lcd_support_menu()
 #if (FW_DEV_VERSION != FW_VERSION_GOLD) && (FW_DEV_VERSION != FW_VERSION_RC)
   MENU_ITEM_BACK_P(PSTR(" repo " FW_REPOSITORY));
 #endif
-      
+
   MENU_ITEM_BACK_P(_n("prusa3d.com"));////MSG_PRUSA3D c=18
   MENU_ITEM_BACK_P(_n("forum.prusa3d.com"));////MSG_PRUSA3D_FORUM c=18
   MENU_ITEM_BACK_P(_n("help.prusa3d.com"));////MSG_PRUSA3D_HELP c=18
@@ -2229,6 +2229,7 @@ void lcd_load_filament_color_check()
 }
 
 #ifdef FILAMENT_SENSOR
+static void lcd_menu_AutoLoadFilament() __attribute__((unused));
 static void lcd_menu_AutoLoadFilament()
 {
     lcd_display_message_fullscreen_nonBlocking_P(_i("Autoloading filament is active, just press the knob and insert filament..."));////MSG_AUTOLOADING_ENABLED c=20 r=4
@@ -5244,7 +5245,7 @@ static void lcd_main_menu()
         } else {
 #ifdef FILAMENT_SENSOR
             if (fsensor.isEnabled() && fsensor.getAutoLoadEnabled()) {
-                MENU_ITEM_SUBMENU_P(_i("AutoLoad filament"), lcd_menu_AutoLoadFilament);////MSG_AUTOLOAD_FILAMENT c=18
+                //MENU_ITEM_SUBMENU_P(_i("AutoLoad filament"), lcd_menu_AutoLoadFilament);////MSG_AUTOLOAD_FILAMENT c=18
             }
             else
 #endif //FILAMENT_SENSOR

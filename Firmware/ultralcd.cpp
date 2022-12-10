@@ -5361,6 +5361,7 @@ static void lcd_main_menu()
 #ifdef FILAMENT_SENSOR
                 if (fsensor.isEnabled()) {
                     if (!fsensor.getFilamentPresent()) {
+                        MENU_ITEM_TOGGLE_P(_T(MSG_FSENSOR), fsensor.isEnabled() ? _T(MSG_ON) : _T(MSG_OFF), lcd_fsensor_enabled_set);
                         if (fsensor.getAutoLoadEnabled()) {
                             //MENU_ITEM_SUBMENU_P(_T(MSG_AUTOLOAD_FILAMENT), lcd_menu_AutoLoadFilament);
                         } else {

@@ -2242,12 +2242,18 @@ bool calibrate_z_auto()
 	plan_buffer_line_destinationXYZE(feedrate / 60);
 	st_synchronize();
 	enable_endstops(endstops_enabled);
+#ifdef BONDTECH_LGX
+	current_position[Z_AXIS] = Z_MAX_POS + 4.0;
+#elif defined(BONDTECH_MK25S) || defined(BONDTECH_MK3S) || defined(BONDTECH_MOSQUITO) || defined(BONDTECH_MOSQUITO_MAGNUM)
+	current_position[Z_AXIS] = Z_MAX_POS + 2.0;
+#else
 	if (PRINTER_TYPE == PRINTER_MK3) {
 		current_position[Z_AXIS] = Z_MAX_POS + 2.0;
 	}
 	else {
 		current_position[Z_AXIS] = Z_MAX_POS + 9.0;
 	}
+#endif
 	plan_set_position_curposXYZE();
 	return true;
 }
@@ -3684,7 +3690,11 @@ void gcode_M701()
 		fsensor_oq_meassure_start(40);
 #endif //FSENSOR_QUALITY
 
+#ifdef BONDTECH_LGX
+        const int feed_mm_before_raising = 20;
+#else
         const int feed_mm_before_raising = 30;
+#endif
         static_assert(feed_mm_before_raising <= FILAMENTCHANGE_FIRSTFEED);
 
 		lcd_setstatuspgm(_T(MSG_LOADING_FILAMENT));

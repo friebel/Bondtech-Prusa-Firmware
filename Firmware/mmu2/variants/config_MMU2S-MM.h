@@ -27,8 +27,8 @@ static constexpr float MMU2_FILAMENT_SENSOR_POSITION = 0; // mm
 static constexpr float MMU2_LOAD_DISTANCE_PAST_GEARS = 5; // mm
 static constexpr uint8_t MMU2_TOOL_CHANGE_LOAD_LENGTH = static_cast<uint8_t>(MMU2_FILAMENT_SENSOR_POSITION + MMU2_LOAD_DISTANCE_PAST_GEARS); // mm
 
-static constexpr float MMU2_EXTRUDER_PTFE_LENGTH = 42.3f; // mm
-static constexpr float MMU2_EXTRUDER_HEATBREAK_LENGTH  = 17.7f; // mm
+static constexpr float MMU2_EXTRUDER_PTFE_LENGTH = 43f; // mm
+static constexpr float MMU2_EXTRUDER_HEATBREAK_LENGTH  = 24.7f; // mm
 
 static constexpr float MMU2_LOAD_TO_NOZZLE_FEED_RATE = 20.0F; // mm/s
 static constexpr float MMU2_UNLOAD_TO_FINDA_FEED_RATE = 120.0F; // mm/s

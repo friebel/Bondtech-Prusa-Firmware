@@ -17,7 +17,7 @@
 #define NOZZLE_TYPE "E3Dv6full"
 
 // Printer name
-#define CUSTOM_MENDEL_NAME "LGX-M-HT MK3S"
+#define CUSTOM_MENDEL_NAME "LGX-M MK3S"
 
 // Electronics
 #define MOTHERBOARD BOARD_EINSY_1_0a
@@ -321,7 +321,7 @@
 #if defined(E3D_PT100_EXTRUDER_WITH_AMP) || defined(E3D_PT100_EXTRUDER_NO_AMP)
 #define HEATER_0_MAXTEMP 410
 #else
-#define HEATER_0_MAXTEMP 410
+#define HEATER_0_MAXTEMP 305
 #endif
 #define BED_MAXTEMP 125
 #define AMBIENT_MAXTEMP 100
@@ -585,7 +585,7 @@
 #elif defined(E3D_PT100_EXTRUDER_NO_AMP)
 #define TEMP_SENSOR_0 148
 #else
-#define TEMP_SENSOR_0 800
+#define TEMP_SENSOR_0 5
 #endif
 #if defined(E3D_PT100_BED_WITH_AMP)
 #define TEMP_SENSOR_BED 247
@@ -651,7 +651,7 @@
 
 //#define SUPPORT_VERBOSITY
 
-#define MMU_CONFIG_FILE "mmu2/variants/config_MMU2S.h"
+#define MMU_CONFIG_FILE "mmu2/variants/config_MMU2S-M.h"
 #define MMU_FILAMENT_COUNT 5
 //#define MMU_FORCE_STEALTH_MODE
 #define MMU_HWRESET

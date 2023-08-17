@@ -20,7 +20,7 @@
 #define CUSTOM_MENDEL_NAME "LGX-M MK25S"
 
 // Electronics
-#define MOTHERBOARD BOARD_RAMBO_MINI_1_0
+#define MOTHERBOARD BOARD_RAMBO_MINI_1_3
 
 #define HEATBED_V2
 #define STEEL_SHEET
@@ -94,6 +94,7 @@
 #define DEFAULT_MAX_FEEDRATE_SILENT         {172, 172, 12, 120}      // (mm/sec)   max feedrate (M203), silent mode
 #define DEFAULT_MAX_ACCELERATION      {1000, 1000, 200, 5000}  // (mm/sec^2) max acceleration (M201)
 #define DEFAULT_MAX_ACCELERATION_SILENT     {960, 960, 200, 5000}    // (mm/sec^2) max acceleration (M201), silent mode
+
 
 #define DEFAULT_ACCELERATION          1250   // X, Y, Z and E max acceleration in mm/s^2 for printing moves (M204P)
 #define DEFAULT_RETRACT_ACCELERATION  1250   // X, Y, Z and E max acceleration in mm/s^2 for retracts (M204R)
@@ -479,7 +480,7 @@
 
 //#define SUPPORT_VERBOSITY
 
-#define MMU_CONFIG_FILE "mmu2/variants/config_MMU2S.h"
+#define MMU_CONFIG_FILE "mmu2/variants/config_MMU2S-M.h"
 #define MMU_FILAMENT_COUNT 5
 #define MMU_FORCE_STEALTH_MODE
 #define MMU_DEBUG //print communication between MMU and printer on serial

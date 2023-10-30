@@ -43,13 +43,7 @@
  *------------------------------------*/
 
 // Steps per unit {X,Y,Z,E}
-<<<<<<<< HEAD:Firmware/variants/Bondtech-MK3S-16-EINSy10a-LGX-M.h
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200/8,140}
 #define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200/8,400}
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200/8,560}
-========
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {100,100,3200/8,280}
->>>>>>>> upstream/MK3_3.13.2:Firmware/variants/MK3S.h
 
 // Endstop inverting
 #define X_MIN_ENDSTOP_INVERTING 0 // set to 1 to invert the logic of the endstop.

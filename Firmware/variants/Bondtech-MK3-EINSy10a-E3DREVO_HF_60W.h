@@ -400,8 +400,8 @@
 
 #define THERMAL_MODEL_Ta_corr -7     // Default ambient temperature correction
 
-#include "thermal_model/e3d_v6.h"
-#define THERMAL_MODEL_DEFAULT E3D_V6 // Default model parameters
+#include "thermal_model/e3d_REVO_HF_60W.h"
+#define THERMAL_MODEL_DEFAULT E3D_REVO_HF_60W // Default E3D REVO HF 60W model parameters
 
 
 /*------------------------------------
